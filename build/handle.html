@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breddit</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="grey">
+                    <p class="lead">This is a lead column</p><p>
+See how I sit here
+Lookin' pretty good
+</p>
+</div>         
+</div>
+<div class="col-sm-4" ng-app="app">
+    <div class="grey">
+        <h1>Navigation</h1>
+        <p>
+            Welcome to <b>Breddit</b>. A place for discussions on literally every single topic ever.
+        </p>
+    </div>
+    <div ng-controller="login" class="grey">
+    <div class="sample-show-hide" ng-hide="toggle">
+      <h1>{{helloMessage}}</h1>
+      <form ng-submit="" role="form" class="form">
+        <label for="name">What's your name?</label>
+        <input type="text" name="user" ng-model="name" required>
+        <label for="email">Hi {{ name }}! What's your email address?</label> 
+        <input type="email" name="email" ng-model="email" required>
+        <button type="submit" ng-model="subButton">Submit</button>
+      </form>
+      <p>
+        Have an account already? Click <a href="" ng-click="toggleFilter()">here</a> to login
+      </p>
+    </div>
+    <div ng-show="toggle">
+      <h1>Login</h1>
+      <form ng-submit="" role="form" class="form">
+        <label for="email">Email:</label>
+        <input type="email" name="email" ng-model="emailLog" required>
+        <label for="email">Password:</label>
+        <input type="password" name="password" ng-model="passLog" required>
+        <button type="submit" ng-model="subButton">Submit</button>
+      </form>
+      <p>
+        Don't have an account? Click <a href="" ng-click="toggleFilter()">here</a> to sign up
+      </p>
+    </div>
+    </div>
+</div>
+</div><div class="row">
+    <div class="col-sm-4">
+        <div class="grey">
+            This is a column
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="grey">
+            This is a column poop
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="grey">
+            This is a column
+        </div>
+    </div>
+</div>
+</div>
+  <script src="js/form.js"></script>
+</body>
+
+</html>
