@@ -1,5 +1,6 @@
-var app = angular.module('app', []);
-app.controller('login', function($scope) {
+export default angular
+    .module('app.controllers',[])
+    .controller('login', function($scope) {
     $scope.helloMessage = "Sign up";
     $scope.name = "";
     $scope.email = "";
@@ -9,6 +10,6 @@ app.controller('login', function($scope) {
     $scope.toggle = false;
     $scope.toggleFilter = function() {
         $scope.toggle = $scope.toggle === false ? true : false;
-    }
-});
-
+        }
+    })
+    .name;
