@@ -1,6 +1,6 @@
 {{>header}}
 {{{contents}}}
-    <div class="thread" ng-controller="thread">
+    <div class="thread" ng-controller="thread as thread1">
       <h4 ng-click="toggleFilter()" ng-class="class" ng-bind="message"></h4>
       <div class="title">In <span class="cat">Category Name</span> with <a href="">30 Comments</a>
         <div class="rating">
@@ -11,7 +11,22 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar...
             sagittis libero vitae iaculis. Nulla tristique lorem elit, non tincidunt 
           </p>
-        <p><a href="">Read more</a></p>
+        <p><a href="" class="read">Read more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="thread" ng-controller="thread as thread2">
+      <h4 ng-click="toggleFilter()" ng-class="class" ng-bind="message"></h4>
+      <div class="title">In <span class="cat">Category Name</span> with <a href="">30 Comments</a>
+        <div class="rating">
+          <span>☆</span>
+        </div>
+        <div class="showthread" ng-show="toggle">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar...
+            sagittis libero vitae iaculis. Nulla tristique lorem elit, non tincidunt 
+          </p>
+        <p><a href="" class="read">Read more</a></p>
         </div>
       </div>
     </div>

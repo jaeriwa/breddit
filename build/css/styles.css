@@ -4,6 +4,12 @@ body {
     margin-top: 50px;
 }
 
+.container {
+    background-color: #fefefe;
+    box-sizing: content-box;
+    padding: 0px 50px 50px;
+}
+
 .grey {
     width: 99%;
     box-sizing: border-box;
@@ -19,4 +25,12 @@ h2,
 h3 {
     color: #DD6E42;
     font-size: 21px;
+}
+
+.grey form {
+    margin: 0px 10px;
+}
+
+.grey p {
+    margin: 0px 6px;
 }
