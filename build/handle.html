@@ -10,7 +10,7 @@
 <title>Breddit</title>
 </head>
 
-<body>
+<body ng-app="app">
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
@@ -18,9 +18,24 @@
                     <h1>Welcome to Breddit, yo</h1><p>
 Here's some content. 
 </p>
+    <div class="thread" ng-controller="thread">
+      <h4 ng-click="toggleFilter()" ng-class="class" ng-bind="message"></h4>
+      <div class="title">In <span class="cat">Category Name</span> with <a href="">30 Comments</a>
+        <div class="rating">
+          <span>☆</span>
+        </div>
+        <div class="showthread" ng-show="toggle">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar...
+            sagittis libero vitae iaculis. Nulla tristique lorem elit, non tincidunt 
+          </p>
+        <p><a href="">Read more</a></p>
+        </div>
+      </div>
+    </div>
 </div>         
 </div>
-<div class="col-sm-4" ng-app="app">
+<div class="col-sm-4">
     <div class="grey">
         <h2>Navigation</h2>
         <p>
@@ -42,7 +57,7 @@ Here's some content.
       </p>
     </div>
     <div ng-show="toggle">
-      <h1>Login</h1>
+      <h2>Login</h2>
       <form ng-submit="" role="form" class="form">
         <label for="email">Email:</label>
         <input type="email" name="email" ng-model="emailLog" required>
@@ -64,12 +79,12 @@ Here's some content.
     </div>
     <div class="col-sm-4">
         <div class="grey">
-            This is a column poop
+            &nbsp;
         </div>
     </div>
     <div class="col-sm-4">
         <div class="grey">
-            This is a column
+            &nbsp;
         </div>
     </div>
 </div>

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -76,7 +76,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = angular.module('app.controllers', []).controller('login', function ($scope) {
+exports.default = angular.module('app.controllers', []).controller('login', ['$scope', function ($scope) {
     $scope.helloMessage = "Sign up";
     $scope.name = "";
     $scope.email = "";
@@ -87,10 +87,34 @@ exports.default = angular.module('app.controllers', []).controller('login', func
     $scope.toggleFilter = function () {
         $scope.toggle = $scope.toggle === false ? true : false;
     };
-}).name;
+}]).name;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = angular.module('app.threads', []).controller("thread", ['$scope', function ($scope) {
+  $scope.message = "Thread title";
+  $scope.class = "down";
+  $scope.toggle = false;
+  $scope.toggleFilter = function () {
+    $scope.toggle = $scope.toggle === false ? true : false;
+    if ($scope.class === "down") {
+      $scope.class = "up";
+    } else {
+      $scope.class = "down";
+    }
+  };
+}]).name;
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100,9 +124,13 @@ var _form = __webpack_require__(0);
 
 var _form2 = _interopRequireDefault(_form);
 
+var _thread = __webpack_require__(1);
+
+var _thread2 = _interopRequireDefault(_thread);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-angular.module('app', [_form2.default]);
+angular.module('app', [_form2.default, _thread2.default]);
 
 /***/ })
 /******/ ]);

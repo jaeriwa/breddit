@@ -1,5 +1,20 @@
 {{>header}}
 {{{contents}}}
+    <div class="thread" ng-controller="thread">
+      <h4 ng-click="toggleFilter()" ng-class="class" ng-bind="message"></h4>
+      <div class="title">In <span class="cat">Category Name</span> with <a href="">30 Comments</a>
+        <div class="rating">
+          <span>☆</span>
+        </div>
+        <div class="showthread" ng-show="toggle">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar...
+            sagittis libero vitae iaculis. Nulla tristique lorem elit, non tincidunt 
+          </p>
+        <p><a href="">Read more</a></p>
+        </div>
+      </div>
+    </div>
 {{>navigation}}
 <div class="row">
     <div class="col-sm-4">
@@ -9,12 +24,12 @@
     </div>
     <div class="col-sm-4">
         <div class="grey">
-            This is a column poop
+            &nbsp;
         </div>
     </div>
     <div class="col-sm-4">
         <div class="grey">
-            This is a column
+            &nbsp;
         </div>
     </div>
 </div>
