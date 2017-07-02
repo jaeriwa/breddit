@@ -1,32 +1,42 @@
 {{>header}}
 {{{contents}}}
     <div class="thread" ng-controller="thread as thread1">
-      <h4 ng-click="toggleFilter()" ng-class="class" ng-bind="message"></h4>
-      <div class="title">In <span class="cat">Category Name</span> with <a href="">30 Comments</a>
+    <h4 ng-click="active = !active" ng-class="{'arrow--active':active}" class="arrow">Latest Thread Title</h4>
+      <div class="title">In <span class="cat">category</span> with <a href="">30 Comments</a>
         <div class="rating">
           <span>☆</span>
         </div>
-        <div class="showthread" ng-show="toggle">
+        <div class="showthread" ng-class="{'showthread--active': active}">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar...
-            sagittis libero vitae iaculis. Nulla tristique lorem elit, non tincidunt 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget mi lobortis pellentesque. Duis quis neque viverra eros commodo fringilla. Cras ornare ligula congue velit condimentum pretium.
+            </p>
+            <p> 
+            Pellentesque aliquet felis vel consequat tincidunt. Vivamus pretium eleifend congue. Suspendisse malesuada interdum malesuada. Ut semper ligula efficitur varius consequat. Vivamus laoreet consectetur dui, id dignissim odio tempus in. 
+            </p>
+            <p>
+            Sed dapibus sem eget justo fermentum, ac feugiat elit pretium. Etiam ornare sodales consectetur. Vivamus a tempor orci. Vestibulum ante risus, facilisis at placerat in, laoreet eu nisl. Mauris nec tortor quis lorem lacinia fringilla. Vestibulum libero ex, finibus at magna dictum, venenatis iaculis ex.
           </p>
-        <p><a href="" class="read">Read more</a></p>
+          <p><a href="" class="read">...Read more</a></p>
         </div>
       </div>
     </div>
     <div class="thread" ng-controller="thread as thread2">
-      <h4 ng-click="toggleFilter()" ng-class="class" ng-bind="message"></h4>
-      <div class="title">In <span class="cat">Category Name</span> with <a href="">30 Comments</a>
+    <h4 ng-click="active = !active" ng-class="{'arrow--active':active}" class="arrow">Latest Thread Title</h4>
+      <div class="title">In <span class="cat">category</span> with <a href="">30 Comments</a>
         <div class="rating">
           <span>☆</span>
         </div>
-        <div class="showthread" ng-show="toggle">
+        <div class="showthread" ng-class="{'showthread--active': active}">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar...
-            sagittis libero vitae iaculis. Nulla tristique lorem elit, non tincidunt 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget mi lobortis pellentesque. Duis quis neque viverra eros commodo fringilla. Cras ornare ligula congue velit condimentum pretium.
+            </p>
+            <p> 
+            Pellentesque aliquet felis vel consequat tincidunt. Vivamus pretium eleifend congue. Suspendisse malesuada interdum malesuada. Ut semper ligula efficitur varius consequat. Vivamus laoreet consectetur dui, id dignissim odio tempus in. 
+            </p>
+            <p>
+            Sed dapibus sem eget justo fermentum, ac feugiat elit pretium. Etiam ornare sodales consectetur. Vivamus a tempor orci. Vestibulum ante risus, facilisis at placerat in, laoreet eu nisl. Mauris nec tortor quis lorem lacinia fringilla. Vestibulum libero ex, finibus at magna dictum, venenatis iaculis ex.
           </p>
-        <p><a href="" class="read">Read more</a></p>
+          <p><a href="" class="read">...Read more</a></p>
         </div>
       </div>
     </div>
@@ -34,7 +44,7 @@
 <div class="row">
     <div class="col-sm-4">
         <div class="grey">
-            This is a column
+            This is the footer column. Copyright etc. goes here.
         </div>
     </div>
     <div class="col-sm-4">

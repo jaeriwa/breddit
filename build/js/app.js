@@ -97,20 +97,10 @@ exports.default = angular.module('app.controllers', []).controller('login', ['$s
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = angular.module('app.threads', []).controller("thread", ['$scope', function ($scope) {
-  $scope.message = "Thread title";
-  $scope.class = "down";
-  $scope.toggle = false;
-  $scope.toggleFilter = function () {
-    $scope.toggle = $scope.toggle === false ? true : false;
-    if ($scope.class === "down") {
-      $scope.class = "up";
-    } else {
-      $scope.class = "down";
-    }
-  };
+    $scope.message = "Thread title";
 }]).name;
 
 /***/ }),
